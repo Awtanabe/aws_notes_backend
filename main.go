@@ -43,7 +43,7 @@ func main() {
 
 	var err error
 	// Retry database connection
-	for i := 0; i < 30; i++ {
+	for i := 0; i < 10; i++ {
 		db, err = gorm.Open(mysql.Open(dsn), &gorm.Config{})
 		if err == nil {
 			break
